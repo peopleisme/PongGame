@@ -16,7 +16,7 @@ const io = new Server(server, {
 app.use(cors())
 
 app.get("/api", (req, res) => {
-
+    res.send({"users":["essa"]})
 })
 server.listen(3001, () => {
     console.log("Server started on port 3001")

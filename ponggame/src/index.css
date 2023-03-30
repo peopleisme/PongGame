@@ -1,3 +1,9 @@
+
+:root {
+  --black: rgba(50,50,50,1);
+  --grey: rgba(50,50,50,0.5);
+  --red: #B2380D;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,102 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Bebas Neue', cursive;
+  color: var(--black);
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container{
+  height: 100vh;
+  max-width: 1920px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  flex: 1 1 1;
+  align-content: stretch;
+}
+.title{
+  display: flex;
+  font-size: 8rem;
+  height: 50%;
+  justify-content: center;
+  align-items:center ;
+}
+.options{
+  display: flex;
+  font-size: 4rem;
+  height: 20%;
+  justify-content: center;
+  align-items:center ;
+}
+.option{
+  display: block;
+  color: inherit;
+  text-decoration: inherit; /* no underline */
+  color: var(--grey);
+}
+.option:before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: calc(2rem - 10px);
+  background-color: var(--red);
+  border-radius: 15px;
+  transform: scale(0,0);
+  transition: 200ms;
+}
+.option:hover{
+  transition: 200ms;
+  color: var(--black);
+}
+.option:hover::before{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: calc(2rem - 10px);
+  background-color: #B2380D;
+  border-radius: 15px;
+  transform: scale(1,1);
+}
+/* .option:active::before{
+  animation-name: fill;
+  animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: alternate;
+  
+}
+
+@keyframes fill {
+  from {transform: scale(1,1);}
+  to {transform: scale(15,15);}
+}
+   */
+.myPlatform{
+  position: fixed;
+  height: 20px;
+  width: 300px;
+  background-color: var(--grey);
+  bottom: 50px;
+}
+
+.Computer{
+  /* cursor: none; */
+}
+.ball{
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #B2380D;
 }
